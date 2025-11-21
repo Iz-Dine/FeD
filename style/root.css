@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("./fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("./fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Dobora";
+  src: url("./fonts/Dobora-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+    /* Coolblue kleuren */
+    --cb-color-primitive-orange-hotorange: #ff6c00;
+    --cb-color-primitive-white: #ffffff;
+    --cb-color-primary: #0090e3;
+    --cb-color-primary-dark: #0070b8;
+    --cb-color-primary-light: #e8f4fb;
+    --cb-color-background: #ffffff;
+    --cb-color-background-alt: #f7f7f7;
+    
+    /* Text colors */
+    --cb-color-text-primary: #1c1c1c;
+    --cb-color-text-secondary: #666;
+    --cb-color-text-inverse: #ffffff;
+    
+    /* Icon colors */
+    --cb-color-icon-interactive-inverse: #ffffff;
+    --cb-color-icon-accented: #0090e3;
+    --cb-icon-inner-color-contrast: #ffffff;
+    
+    /* Status colors */
+    --cb-color-success: #4caf50;
+    --cb-color-warning: #ff9800;
+    --cb-color-error: #f44336;
+    
+    /* Border & shadows */
+    --cb-color-border: #e0e0e0;
+    --cb-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --cb-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --cb-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Spacing */
+    --cb-spacing-xs: 0.5rem;
+    --cb-spacing-sm: 1rem;
+    --cb-spacing-md: 1.5rem;
+    --cb-spacing-lg: 2rem;
+    --cb-spacing-xl: 3rem;
+    
+    /* Border radius */
+    --cb-radius-sm: 4px;
+    --cb-radius-md: 8px;
+    --cb-radius-lg: 12px;
+    
+    /* Transitions */
+    --cb-transition: 0.3s ease-in-out;
+}

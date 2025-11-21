@@ -141,6 +141,8 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 Nb. ChatGpT en andere AI horen er ook bij.
 Nb. Vermeld de bronnen ook in je code.
 
+https://css-tricks.com/a-complete-guide-to-data-attributes/
+
 1. bron 1
 2. bron 2
 3. ...
