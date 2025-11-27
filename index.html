@@ -10,26 +10,49 @@
     <link rel="stylesheet" href="style/remedy.css"> 
 </head>
 <body>
-    <a href="#main" data-skip>Spring naar hoofdinhoud</a>
+    <!-- Skip link -->
+    <a href="#main">Spring naar hoofdinhoud</a>
 
+    <!-- Header -->
     <header>
-
+        <!-- Top navigation -->
         <nav aria-label="Hoofdnavigatie">
-            
-            <button aria-label="Menu openen" aria-expanded="false" aria-controls="main-menu" data-hamburger>
+            <!-- Hamburger menu -->
+            <button aria-label="Menu openen" aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="var(--cb-color-icon-interactive-inverse)" width="2.4rem" height="2.4rem" aria-hidden="true">
                     <path d="M17.5 5a1.25 1.25 0 1 0 0-2.5h-15a1.25 1.25 0 0 0 0 2.5zm1.25 5c0 .69-.56 1.25-1.25 1.25h-15a1.25 1.25 0 1 1 0-2.5h15c.69 0 1.25.56 1.25 1.25m0 6.25c0 .69-.56 1.25-1.25 1.25h-15a1.25 1.25 0 1 1 0-2.5h15c.69 0 1.25.56 1.25 1.25"></path>
                 </svg>
             </button>
-            
-            <a href="/" aria-label="Coolblue homepage" data-logo>
+
+            <!-- Logo -->
+            <a href="/" aria-label="Coolblue homepage">
                 <svg viewBox="0 0 83 52" focusable="false" aria-hidden="true">
                     <path d="M41.3 65.5C18.5 65.5 0 47.1 0 24.3 0 1.6 18.5-16.9 41.3-16.9c22.7 0 41.2 18.5 41.2 41.2 0 22.8-18.5 41.2-41.2 41.2Z" fill="var(--cb-color-primitive-orange-hotorange)"></path>
                     <path d="M19.8 24.8c.2 0 .3 0 .5.1.1.1.1.3.2.4v4.3c.5-.2 1-.3 1.7-.5.6-.1 1.3-.1 2.1-.1 1.4 0 2.6.1 3.6.4.9.3 1.7.8 2.3 1.3.6.6 1.1 1.3 1.4 2.2.2.8.4 1.8.4 2.9 0 1.1-.1 2.1-.4 2.9-.3.9-.7 1.6-1.3 2.1-.6.6-1.4 1-2.4 1.3-.9.3-2.1.5-3.5.5-.8 0-1.5-.1-2.2-.3-.6-.1-1.2-.3-1.7-.5l-.1.4c0 .2 0 .3-.1.3H17c-.1 0-.3 0-.4-.1-.2-.2-.2-.3-.2-.5V25.4c0-.2 0-.3.2-.5.1-.1.2-.1.4-.1Zm45.3 13.6c.1 0 .2.1.3.2l1 1.3c.2.2.2.2.2.3.4.4-.3.9-.3.9-.5.3-.8.4-1.1.6-.4.2-.9.4-1.3.5-.4.1-.9.2-1.4.3h-1.8c-1.6 0-2.9-.1-3.8-.5-1-.4-1.8-.9-2.3-1.5-.5-.6-.9-1.3-1.1-2.1-.2-.8-.3-1.7-.3-2.6 0-.9.1-1.8.3-2.6.2-.8.6-1.6 1.1-2.2.6-.6 1.3-1.1 2.3-1.5 1-.3 2.2-.5 3.7-.5 1.1 0 2 .1 2.7.3.7.2 1.3.5 1.8.8.5.4.9.8 1.1 1.3.3.5.5 1 .6 1.6.1.6.2 1.2.2 1.9V37h-7.6c-.4 0-.4-.3-.4-.3v-1.9s.1-.4.4-.4h4c0-.3-.1-.7-.2-1 0-.3-.2-.6-.4-.8-.2-.2-.5-.4-.8-.5-.4-.2-.9-.2-1.5-.2h-.3c-.5 0-.9.1-1.2.2-.5.1-.8.3-1.1.5-.2.2-.4.5-.6.8-.1.3-.2.6-.3 1 0 0-.1 1.5 0 2.6.1.4.2.8.3 1.1.2.3.4.6.7.8.3.2.6.4 1 .5.5.2 1 .2 1.7.2h.2c.5 0 .8 0 1.1-.1.4 0 .7-.1 1-.2.3-.1.6-.2.8-.3.2-.2.5-.3.8-.5.1-.1.3-.2.4-.2ZM36.6 24.7c.1 0 .3 0 .4.2.1.1.2.2.2.4v13.6h.4c.1 0 .3 0 .4.2.1.1.2.2.2.4v2.4c0 .1-.1.3-.2.4-.1.1-.3.2-.4.2h-3.7c-.2 0-.4-.1-.5-.2-.1-.2-.2-.3-.2-.5V25.3c0-.2 0-.3.2-.4.1-.2.2-.2.4-.2h2.8Zm5.7 4.3c.2 0 .4.1.5.2.1.1.2.2.2.4v7.8c0 .3.1.7.3 1 .2.2.5.4.8.6.4.2.9.2 1.6.2.6 0 1.1 0 1.5-.2.4-.2.6-.4.8-.7.2-.2.3-.6.3-1s.1-.8.1-1.3v-6.4c0-.2 0-.3.1-.4.2-.1.3-.2.5-.2h2.4c.1 0 .3.1.4.2.1.1.2.2.2.4V36c0 1.1-.1 2.1-.3 2.9-.2.9-.5 1.5-1 2-.4.6-1.1.9-1.9 1.2-.8.2-1.9.4-3.1.4-1.3 0-2.4-.2-3.2-.4-.8-.3-1.5-.6-2-1.2-.5-.5-.8-1.1-1-2-.2-.8-.3-1.8-.3-2.9v-6.4c0-.2.1-.3.2-.4.2-.1.3-.2.5-.2h2.4Zm-18 3.2c-.7 0-1.2.1-1.7.2-.4.2-.8.5-1.1.8-.2.3-.4.7-.5 1.2-.2.4-.2.9-.2 1.5 0 .5 0 1 .2 1.5.1.4.3.8.5 1.1.3.3.7.6 1.1.8.5.1 1 .2 1.7.2s1.3-.1 1.8-.2c.4-.2.8-.5 1.1-.8.2-.3.4-.7.5-1.1.1-.5.2-1 .2-1.5 0-.6-.1-1.1-.2-1.5-.1-.5-.3-.9-.5-1.2-.3-.3-.7-.6-1.1-.8-.5-.1-1.1-.2-1.8-.2Zm-.8-22.1h1.8c.6.1 1.1.2 1.5.3.4.1.9.3 1.3.5s.6.3 1.1.7c0 0 .7.4.3.9 0 .1 0 .1-.2.3l-1 1.3c-.1.1-.2.2-.4.2-.1 0-.3 0-.4-.1-.3-.2-1.5-1.2-4-1.2-1.8 0-4.3 1.1-4.3 3.6s2.3 3.6 4.3 3.6c2.7 0 3.7-1 4-1.2h.1c.1-.1.2-.1.3-.1.2 0 .3.1.4.2l1 1.3c.2.2.2.2.2.3.4.5-.3.9-.3.9-.5.4-.7.5-1.1.7-.4.2-.9.4-1.3.5-.4.1-.9.2-1.5.3h-1.8c-1.6 0-2.8-.2-3.8-.5-1-.4-4.2-2-4.2-6.1 0-4 3.2-5.5 4.2-5.9 1-.3 2.2-.5 3.8-.5Zm14.1 0c1.3 0 2.4.1 3.4.4.9.3 1.6.7 2.2 1.3.6.5 1.1 1.2 1.3 2 .3.8.4 1.7.4 2.8 0 1-.1 2-.4 2.8-.2.8-.7 1.5-1.3 2-.6.6-1.3 1-2.2 1.3-1 .3-2.1.4-3.4.4-1.3 0-2.5-.1-3.4-.4-.9-.3-1.7-.7-2.2-1.3-.6-.5-1.1-1.2-1.3-2-.3-.8-.4-1.8-.4-2.8 0-1.1.1-2 .4-2.8.2-.8.7-1.5 1.3-2 .5-.6 1.3-1 2.2-1.3.9-.3 2.1-.4 3.4-.4Zm15.9 0c1.3 0 2.5.1 3.4.4.9.3 1.7.7 2.3 1.3.5.5 1 1.2 1.2 2 .3.8.4 1.7.4 2.8 0 1-.1 2-.4 2.8-.2.8-.7 1.5-1.2 2-.6.6-1.4 1-2.3 1.3-.8.2-1.8.4-3 .4h-.4c-1.3 0-2.4-.1-3.4-.4-.9-.3-1.6-.7-2.2-1.3-.6-.5-1-1.2-1.3-2-.3-.8-.4-1.8-.4-2.8 0-1.1.1-2 .4-2.8.3-.8.7-1.5 1.3-2 .6-.6 1.3-1 2.2-1.3 1-.3 2.1-.4 3.4-.4Zm11.8-4c.2 0 .3 0 .5.2.1.1.1.2.1.3v13h.4c.2.1.3.1.4.2.1.1.2.2.2.4v2.3c0 .2-.1.3-.2.4-.1.1-.2.2-.4.2h-3.5c-.2 0-.4-.1-.5-.2-.1-.1-.2-.3-.2-.4V6.6c0-.1.1-.2.2-.3.1-.2.2-.2.4-.2h2.6Zm-27.7 7c-.7 0-1.2.1-1.7.3-.4.1-.8.4-1 .7-.3.3-.5.7-.6 1.1-.1.5-.1.9-.1 1.5 0 .5 0 1 .1 1.4.1.5.3.9.6 1.2.2.3.6.5 1 .7.5.2 1 .3 1.7.3s1.2-.1 1.7-.3c.4-.2.7-.4 1-.7.3-.3.5-.7.6-1.2.1-.4.1-.9.1-1.4 0-.6 0-1-.1-1.5-.1-.4-.3-.8-.6-1.1-.3-.3-.6-.6-1-.7-.5-.2-1-.3-1.7-.3Zm15.9 0c-.7 0-1.2.1-1.6.3-.5.1-.8.4-1.1.7-.3.3-.4.7-.5 1.1-.1.5-.2.9-.2 1.5 0 .5.1 1 .2 1.4.1.5.2.9.5 1.2.3.3.6.5 1.1.7.4.2.9.3 1.6.3.7 0 1.2-.1 1.7-.3.4-.2.8-.4 1-.7.3-.3.5-.7.6-1.2.1-.4.1-.9.1-1.4 0-.6 0-1-.1-1.5-.1-.4-.3-.8-.6-1.1-.2-.3-.6-.6-1-.7-.5-.2-1-.3-1.7-.3Z" fill="var(--cb-color-primitive-white)"></path>
                 </svg>
             </a>
 
-            <ul data-menu-desktop role="menubar">
+            <!-- Search form (desktop ) -->
+            <form role="search" action="/zoeken" method="get">
+                <label for="search">Zoeken</label>
+                <input 
+                    type="search" 
+                    name="q"
+                    placeholder="Waar ben je naar op zoek?" 
+                    aria-label="Zoeken naar producten"
+                    autocomplete="off">
+                <button type="submit" aria-label="Zoeken">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="1.6rem" height="1.6rem" aria-hidden="true">
+                        <g fill-rule="evenodd">
+                            <path d="M8.125 12.083c2.49 0 4.375-1.937 4.375-4.166S10.614 3.75 8.125 3.75c-2.49 0-4.375 1.937-4.375 4.167s1.886 4.166 4.375 4.166m0 2.5C11.922 14.583 15 11.6 15 7.917c0-3.682-3.078-6.667-6.875-6.667S1.25 4.235 1.25 7.917s3.078 6.666 6.875 6.666"></path>
+                            <path d="M11.2 11.2a1.25 1.25 0 0 1 1.767 0l5.417 5.416a1.25 1.25 0 0 1-1.768 1.768L11.2 12.967a1.25 1.25 0 0 1 0-1.768Z"></path>
+                        </g>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Desktop menu items -->
+            <ul role="menubar">
                 <li role="none">
                     <a href="#verlanglijst" role="menuitem" aria-label="Verlanglijst">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
@@ -54,16 +77,16 @@
                 </li>
             </ul>
         </nav>
-        
+
+        <!-- Mobile search (below nav on mobile) -->
         <form role="search" action="/zoeken" method="get">
-            <label for="search" data-visually-hidden>Zoeken</label>
+            <label for="search-mobile">Zoeken</label>
             <input 
                 type="search" 
                 name="q"
                 placeholder="Waar ben je naar op zoek?" 
                 aria-label="Zoeken naar producten"
-                autocomplete="off"
-                data-search-input>
+                autocomplete="off">
             <button type="submit" aria-label="Zoeken">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="1.6rem" height="1.6rem" aria-hidden="true">
                     <g fill-rule="evenodd">
@@ -74,7 +97,8 @@
             </button>
         </form>
 
-        <nav aria-label="Productcategorieën" data-categories>
+        <!-- Category navigation -->
+        <nav aria-label="Productcategorieën">
             <ul role="menubar">
                 <li role="none"><a href="#laptops" role="menuitem">Laptops</a></li>
                 <li role="none"><a href="#smartphones" role="menuitem">Smartphones</a></li>
@@ -87,139 +111,281 @@
         </nav>
     </header>
 
-    <main data-main>
+    <!-- Main content -->
+    <main>
+        <!-- Hero section with rotating text carousel -->
         <section aria-labelledby="hero">
-            <h1 data-hero-title>Black Friday deals</h1>
+            <h1>Black Friday deals</h1>
             <p>Tot 50% korting op de beste producten</p>
+            <p>Gratis bezorging vanaf €20</p>
+            <p>30 dagen bedenktijd</p>
             <a href="#deals">Bekijk alle deals</a>
         </section>
-        
+
+        <!-- Product categories -->
         <section aria-labelledby="categories">
-            <h2 data-section-title>Populaire categorieën</h2>
-            <ul data-grid="categories">
+            <h2>Populaire categorieën</h2>
+            <ul>
                 <li>
                     <article>
                         <a href="#laptops">
-                            <figure>
-                                <img src="images/category-laptops.jpg" alt="" loading="lazy" width="400" height="300">
-                                <figcaption>
-                                    <h3>Laptops</h3>
-                                </figcaption>
-                            </figure>
+                            <img src="images/category-laptops.jpg" alt="" loading="lazy" width="400" height="300">
+                            <h3>Laptops</h3>
                         </a>
                     </article>
                 </li>
                 <li>
                     <article>
                         <a href="#smartphones">
-                            <figure>
-                                <img src="images/category-smartphones.jpg" alt="" loading="lazy" width="400" height="300">
-                                <figcaption>
-                                    <h3>Smartphones</h3>
-                                </figcaption>
-                            </figure>
+                            <img src="images/category-smartphones.jpg" alt="" loading="lazy" width="400" height="300">
+                            <h3>Smartphones</h3>
                         </a>
                     </article>
                 </li>
                 <li>
                     <article>
                         <a href="#tvs">
-                            <figure>
-                                <img src="images/category-tvs.jpg" alt="" loading="lazy" width="400" height="300">
-                                <figcaption>
-                                    <h3>TV's</h3>
-                                </figcaption>
-                            </figure>
+                            <img src="images/category-tvs.jpg" alt="" loading="lazy" width="400" height="300">
+                            <h3>TV's</h3>
                         </a>
                     </article>
                 </li>
                 <li>
                     <article>
                         <a href="#gaming">
-                            <figure>
-                                <img src="images/category-gaming.jpg" alt="" loading="lazy" width="400" height="300">
-                                <figcaption>
-                                    <h3>Gaming</h3>
-                                </figcaption>
-                            </figure>
+                            <img src="images/category-gaming.jpg" alt="" loading="lazy" width="400" height="300">
+                            <h3>Gaming</h3>
                         </a>
                     </article>
                 </li>
             </ul>
         </section>
 
-        <section aria-labelledby="featured products">
-            <h2 data-section-title>Aanbevolen voor jou</h2>
-            <ul data-grid="products">
+        <!-- Featured products -->
+        <section aria-labelledby="featured">
+            <h2 id="featured">Aanbevolen voor jou</h2>
+            <ul>
                 <li>
                     <article itemscope itemtype="https://schema.org/Product">
-                        <figure data-product-image>
-                            <img src="images/product-laptop.jpg" alt="Apple MacBook Air M2 13 inch" loading="lazy" width="400" height="400" itemprop="image">
-                            <button aria-label="Toevoegen aan verlanglijst" aria-pressed="false" data-wishlist>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M6.273 3.875c-1.685 0-2.523 1.36-2.523 2.649 0 1.27.628 2.676 1.948 4.784.712 1.134 2.368 3.07 3.668 4.527a.84.84 0 0 0 1.269 0c1.3-1.454 2.956-3.39 3.667-4.527 1.32-2.108 1.948-3.514 1.948-4.784 0-1.292-.837-2.649-2.523-2.649-1.003 0-1.893.66-2.279 1.644a1.537 1.537 0 0 1-2.896 0c-.386-.985-1.274-1.644-2.28-1.644Zm6.237 13.697-.049.058a3.26 3.26 0 0 1-4.919 0m4.968-.058c1.266-1.417 3.041-3.48 3.881-4.822 1.312-2.096 2.359-4.093 2.359-6.226 0-2.36-1.62-5.274-5.023-5.274-1.492 0-2.82.703-3.726 1.8-.908-1.1-2.236-1.8-3.728-1.8-3.404 0-5.023 2.917-5.023 5.274 0 2.133 1.047 4.13 2.359 6.226v.001c.852 1.356 2.665 3.459 3.933 4.88"></path>
-                                </svg>
-                            </button>
-                        </figure>
+                        <img src="images/product-laptop.jpg" alt="Apple MacBook Air M2 13 inch" loading="lazy" width="400" height="400" itemprop="image">
+                        <button aria-label="Toevoegen aan verlanglijst" aria-pressed="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M6.273 3.875c-1.685 0-2.523 1.36-2.523 2.649 0 1.27.628 2.676 1.948 4.784.712 1.134 2.368 3.07 3.668 4.527a.84.84 0 0 0 1.269 0c1.3-1.454 2.956-3.39 3.667-4.527 1.32-2.108 1.948-3.514 1.948-4.784 0-1.292-.837-2.649-2.523-2.649-1.003 0-1.893.66-2.279 1.644a1.537 1.537 0 0 1-2.896 0c-.386-.985-1.274-1.644-2.28-1.644Zm6.237 13.697-.049.058a3.26 3.26 0 0 1-4.919 0m4.968-.058c1.266-1.417 3.041-3.48 3.881-4.822 1.312-2.096 2.359-4.093 2.359-6.226 0-2.36-1.62-5.274-5.023-5.274-1.492 0-2.82.703-3.726 1.8-.908-1.1-2.236-1.8-3.728-1.8-3.404 0-5.023 2.917-5.023 5.274 0 2.133 1.047 4.13 2.359 6.226v.001c.852 1.356 2.665 3.459 3.933 4.88"></path>
+                            </svg>
+                        </button>
                         
-                        <section data-product-info>
-                            <h3 itemprop="name">Apple iPhone 15 Pro 128GB</h3>
+                        <section>
+                            <h3 itemprop="name">Apple MacBook Air M2 13 inch</h3>
                             
-                            <aside aria-label="Beoordeling 4.8 van 5 sterren, 456 recensies" data-rating>
-                                <strong aria-hidden="true">★★★★★</strong>
-                                <data value="4.8" itemprop="ratingValue">4.8</data>
-                                <em>(<data itemprop="reviewCount">456</data>)</em>
+                            <aside aria-label="Beoordeling 4.5 van 5 sterren, 123 recensies">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="var(--cb-color-icon-sentiment-positive)" width="1.6rem" height="1.6rem" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M20 10c0 5.523-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0s10 4.477 10 10m-7.152 1.492 2.643-1.972a.876.876 0 0 0-.476-1.572h-3.141L10.78 4.764a.82.82 0 0 0-.78-.597.82.82 0 0 0-.78.597L8.19 7.948H4.985a.87.87 0 0 0-.778.612.88.88 0 0 0 .302.96l2.643 1.972-1.028 3.216a.88.88 0 0 0 .296.962.794.794 0 0 0 .967-.004L10 13.652l2.613 2.014a.79.79 0 0 0 .967.004.88.88 0 0 0 .296-.962z"></path>
+                                    <path d="m12.848 11.492 2.643-1.972a.876.876 0 0 0-.476-1.572h-3.141L10.78 4.764a.82.82 0 0 0-.78-.597.82.82 0 0 0-.78.597L8.19 7.948H4.985a.87.87 0 0 0-.778.612.88.88 0 0 0 .302.96l2.643 1.972-1.028 3.216a.88.88 0 0 0 .296.962.794.794 0 0 0 .967-.004L10 13.652l2.613 2.014a.79.79 0 0 0 .967.004.88.88 0 0 0 .296-.962z" fill="transparent"></path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="var(--cb-color-icon-sentiment-positive)" width="1.6rem" height="1.6rem" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M20 10c0 5.523-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0s10 4.477 10 10m-7.152 1.492 2.643-1.972a.876.876 0 0 0-.476-1.572h-3.141L10.78 4.764a.82.82 0 0 0-.78-.597.82.82 0 0 0-.78.597L8.19 7.948H4.985a.87.87 0 0 0-.778.612.88.88 0 0 0 .302.96l2.643 1.972-1.028 3.216a.88.88 0 0 0 .296.962.794.794 0 0 0 .967-.004L10 13.652l2.613 2.014a.79.79 0 0 0 .967.004.88.88 0 0 0 .296-.962z"></path>
+                                    <path d="m12.848 11.492 2.643-1.972a.876.876 0 0 0-.476-1.572h-3.141L10.78 4.764a.82.82 0 0 0-.78-.597.82.82 0 0 0-.78.597L8.19 7.948H4.985a.87.87 0 0 0-.778.612.88.88 0 0 0 .302.96l2.643 1.972-1.028 3.216a.88.88 0 0 0 .296.962.794.794 0 0 0 .967-.004L10 13.652l2.613 2.014a.79.79 0 0 0 .967.004.88.88 0 0 0 .296-.962z" fill="transparent"></path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="var(--cb-color-icon-sentiment-positive)" width="1.6rem" height="1.6rem" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M20 10c0 5.523-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0s10 4.477 10 10m-7.152 1.492 2.643-1.972a.876.876 0 0 0-.476-1.572h-3.141L10.78 4.764a.82.82 0 0 0-.78-.597.82.82 0 0 0-.78.597L8.19 7.948H4.985a.87.87 0 0 0-.778.612.88.88 0 0 0 .302.96l2.643 1.972-1.028 3.216a.88.88 0 0 0 .296.962.794.794 0 0 0 .967-.004L10 13.652l2.613 2.014a.79.79 0 0 0 .967.004.88.88 0 0 0 .296-.962z"></path>
+                                    <path d="m12.848 11.492 2.643-1.972a.876.876 0 0 0-.476-1.572h-3.141L10.78 4.764a.82.82 0 0 0-.78-.597.82.82 0 0 0-.78.597L8.19 7.948H4.985a.87.87 0 0 0-.778.612.88.88 0 0 0 .302.96l2.643 1.972-1.028 3.216a.88.88 0 0 0 .296.962.794.794 0 0 0 .967-.004L10 13.652l2.613 2.014a.79.79 0 0 0 .967.004.88.88 0 0 0 .296-.962z" fill="transparent"></path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="var(--cb-color-icon-sentiment-positive)" width="1.6rem" height="1.6rem" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M20 10c0 5.523-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0s10 4.477 10 10m-7.152 1.492 2.643-1.972a.876.876 0 0 0-.476-1.572h-3.141L10.78 4.764a.82.82 0 0 0-.78-.597.82.82 0 0 0-.78.597L8.19 7.948H4.985a.87.87 0 0 0-.778.612.88.88 0 0 0 .302.96l2.643 1.972-1.028 3.216a.88.88 0 0 0 .296.962.794.794 0 0 0 .967-.004L10 13.652l2.613 2.014a.79.79 0 0 0 .967.004.88.88 0 0 0 .296-.962z"></path>
+                                    <path d="m12.848 11.492 2.643-1.972a.876.876 0 0 0-.476-1.572h-3.141L10.78 4.764a.82.82 0 0 0-.78-.597.82.82 0 0 0-.78.597L8.19 7.948H4.985a.87.87 0 0 0-.778.612.88.88 0 0 0 .302.96l2.643 1.972-1.028 3.216a.88.88 0 0 0 .296.962.794.794 0 0 0 .967-.004L10 13.652l2.613 2.014a.79.79 0 0 0 .967.004.88.88 0 0 0 .296-.962z" fill="transparent"></path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="var(--cb-color-icon-sentiment-positive)" width="1.6rem" height="1.6rem" aria-hidden="true">
+                                    <path fill="var(--cb-color-icon-interactive-disabled)" d="M10.04 0H10v4.167c.357 0 .673.241.78.597l1.094 3.184h3.14a.876.876 0 0 1 .476 1.572l-2.642 1.972 1.028 3.216a.88.88 0 0 1-.296.962.79.79 0 0 1-.967-.004L10 13.652V20h.04C15.533 20 20 15.515 20 10S15.533 0 10.04 0"></path>
+                                    <path d="M9.96 0H10v4.167a.82.82 0 0 0-.78.597L8.19 7.948H4.985a.87.87 0 0 0-.778.612.88.88 0 0 0 .302.96l2.643 1.972-1.028 3.216a.88.88 0 0 0 .296.962.794.794 0 0 0 .967-.004L10 13.652V20h-.04C4.467 20 0 15.515 0 10S4.467 0 9.96 0"></path>
+                                    <path d="m12.848 11.492 2.643-1.972a.876.876 0 0 0-.476-1.572h-3.141L10.78 4.764a.82.82 0 0 0-.78-.597.82.82 0 0 0-.78.597L8.19 7.948H4.985a.87.87 0 0 0-.778.612.88.88 0 0 0 .302.96l2.643 1.972-1.028 3.216a.88.88 0 0 0 .296.962.794.794 0 0 0 .967-.004L10 13.652l2.613 2.014a.79.79 0 0 0 .967.004.88.88 0 0 0 .296-.962z" fill="transparent"></path>
+                                </svg>
+                                <data value="4.5" itemprop="ratingValue">4.5</data>
+                                <em>(<data value="123" itemprop="reviewCount">123</data>)</em>
                             </aside>
                             
-                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer" data-price>
-                                <data value="1159" itemprop="price" data-current>€ 1.159,-</data>
+                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <data value="1299" itemprop="price">€ 1.299,-</data>
+                                <data value="1499">€ 1.499,-</data>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </p>
                             
-                            <p data-delivery>Morgen gratis bezorgd</p>
+                            <p>Morgen gratis bezorgd</p>
                             
-                            <button type="button" data-cart>In winkelwagen</button>
+                            <button type="button">In winkelwagen</button>
                         </section>
                     </article>
                 </li>
 
                 <li>
                     <article itemscope itemtype="https://schema.org/Product">
-                        <figure data-product-image>
-                            <img src="images/product-tv.jpg" alt="Samsung 55 inch 4K QLED TV" loading="lazy" width="400" height="400" itemprop="image">
-                            <button aria-label="Toevoegen aan verlanglijst" aria-pressed="false" data-wishlist>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M6.273 3.875c-1.685 0-2.523 1.36-2.523 2.649 0 1.27.628 2.676 1.948 4.784.712 1.134 2.368 3.07 3.668 4.527a.84.84 0 0 0 1.269 0c1.3-1.454 2.956-3.39 3.667-4.527 1.32-2.108 1.948-3.514 1.948-4.784 0-1.292-.837-2.649-2.523-2.649-1.003 0-1.893.66-2.279 1.644a1.537 1.537 0 0 1-2.896 0c-.386-.985-1.274-1.644-2.28-1.644Zm6.237 13.697-.049.058a3.26 3.26 0 0 1-4.919 0m4.968-.058c1.266-1.417 3.041-3.48 3.881-4.822 1.312-2.096 2.359-4.093 2.359-6.226 0-2.36-1.62-5.274-5.023-5.274-1.492 0-2.82.703-3.726 1.8-.908-1.1-2.236-1.8-3.728-1.8-3.404 0-5.023 2.917-5.023 5.274 0 2.133 1.047 4.13 2.359 6.226v.001c.852 1.356 2.665 3.459 3.933 4.88"></path>
-                                </svg>
-                            </button>
-                        </figure>
+                        <img src="images/product-iphone.jpg" alt="Apple iPhone 15 Pro 128GB" loading="lazy" width="400" height="400" itemprop="image">
+                        <button aria-label="Toevoegen aan verlanglijst" aria-pressed="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M6.273 3.875c-1.685 0-2.523 1.36-2.523 2.649 0 1.27.628 2.676 1.948 4.784.712 1.134 2.368 3.07 3.668 4.527a.84.84 0 0 0 1.269 0c1.3-1.454 2.956-3.39 3.667-4.527 1.32-2.108 1.948-3.514 1.948-4.784 0-1.292-.837-2.649-2.523-2.649-1.003 0-1.893.66-2.279 1.644a1.537 1.537 0 0 1-2.896 0c-.386-.985-1.274-1.644-2.28-1.644Zm6.237 13.697-.049.058a3.26 3.26 0 0 1-4.919 0m4.968-.058c1.266-1.417 3.041-3.48 3.881-4.822 1.312-2.096 2.359-4.093 2.359-6.226 0-2.36-1.62-5.274-5.023-5.274-1.492 0-2.82.703-3.726 1.8-.908-1.1-2.236-1.8-3.728-1.8-3.404 0-5.023 2.917-5.023 5.274 0 2.133 1.047 4.13 2.359 6.226v.001c.852 1.356 2.665 3.459 3.933 4.88"></path>
+                            </svg>
+                        </button>
                         
-                        <section data-product-info>
-                            <h3 itemprop="name">Samsung 55 inch 4K QLED TV</h3>
+                        <section>
+                            <h3 itemprop="name">Apple iPhone 15 Pro 128GB</h3>
                             
-                            <aside aria-label="Beoordeling 4.3 van 5 sterren, 89 recensies" data-rating>
-                                <strong aria-hidden="true">★★★★☆</strong>
-                                <data value="4.3" itemprop="ratingValue">4.3</data>
-                                <em>(<data itemprop="reviewCount">89</data>)</em>
+                            <aside aria-label="Beoordeling 4.8 van 5 sterren, 456 recensies">
+                                <strong aria-hidden="true">★★★★★</strong>
+                                <data value="4.8" itemprop="ratingValue">4.8</data>
+                                <em>(<data value="456" itemprop="reviewCount">456</data>)</em>
                             </aside>
                             
-                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer" data-price>
-                                <data value="799" itemprop="price" data-current>€ 799,-</data>
-                                <data value="999" data-old>€ 999,-</data>
+                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <data value="1159" itemprop="price">€ 1.159,-</data>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </p>
                             
-                            <p data-delivery>Morgen gratis bezorgd</p>
+                            <p>Morgen gratis bezorgd</p>
                             
-                            <button type="button" data-cart>In winkelwagen</button>
+                            <button type="button">In winkelwagen</button>
+                        </section>
+                    </article>
+                </li>
+
+                <li>
+                    <article itemscope itemtype="https://schema.org/Product">
+                        <img src="images/product-tv.jpg" alt="Samsung 55 inch 4K QLED TV" loading="lazy" width="400" height="400" itemprop="image">
+                        <button aria-label="Toevoegen aan verlanglijst" aria-pressed="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M6.273 3.875c-1.685 0-2.523 1.36-2.523 2.649 0 1.27.628 2.676 1.948 4.784.712 1.134 2.368 3.07 3.668 4.527a.84.84 0 0 0 1.269 0c1.3-1.454 2.956-3.39 3.667-4.527 1.32-2.108 1.948-3.514 1.948-4.784 0-1.292-.837-2.649-2.523-2.649-1.003 0-1.893.66-2.279 1.644a1.537 1.537 0 0 1-2.896 0c-.386-.985-1.274-1.644-2.28-1.644Zm6.237 13.697-.049.058a3.26 3.26 0 0 1-4.919 0m4.968-.058c1.266-1.417 3.041-3.48 3.881-4.822 1.312-2.096 2.359-4.093 2.359-6.226 0-2.36-1.62-5.274-5.023-5.274-1.492 0-2.82.703-3.726 1.8-.908-1.1-2.236-1.8-3.728-1.8-3.404 0-5.023 2.917-5.023 5.274 0 2.133 1.047 4.13 2.359 6.226v.001c.852 1.356 2.665 3.459 3.933 4.88"></path>
+                            </svg>
+                        </button>
+                        
+                        <section>
+                            <h3 itemprop="name">Samsung 55 inch 4K QLED TV</h3>
+                            
+                            <aside aria-label="Beoordeling 4.3 van 5 sterren, 89 recensies">
+                                <strong aria-hidden="true">★★★★☆</strong>
+                                <data value="4.3" itemprop="ratingValue">4.3</data>
+                                <em>(<data value="89" itemprop="reviewCount">89</data>)</em>
+                            </aside>
+                            
+                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <data value="799" itemprop="price">€ 799,-</data>
+                                <data value="999">€ 999,-</data>
+                                <meta itemprop="priceCurrency" content="EUR">
+                                <link itemprop="availability" href="https://schema.org/InStock">
+                            </p>
+                            
+                            <p>Morgen gratis bezorgd</p>
+                            
+                            <button type="button">In winkelwagen</button>
                         </section>
                     </article>
                 </li>
             </ul>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <section>
+            <nav >
+                <h2>Service</h2>
+                <ul>
+                    <li><a href="#klantenservice">Klantenservice</a></li>
+                    <li><a href="#retourneren">Retourneren</a></li>
+                    <li><a href="#garantie">Garantie</a></li>
+                    <li><a href="#reparatie">Reparatie</a></li>
+                </ul>
+            </nav>
+
+            <nav >
+                <h2 id="about">Over Coolblue</h2>
+                <ul>
+                    <li><a href="#werken">Werken bij Coolblue</a></li>
+                    <li><a href="#winkels">Winkels</a></li>
+                    <li><a href="#duurzaamheid">Duurzaamheid</a></li>
+                    <li><a href="#pers">Pers</a></li>
+                </ul>
+            </nav>
+
+            <nav >
+                <h2>Betalen bij Coolblue</h2>
+                <ul>
+                    <li><a href="#betaalmethoden">Betaalmethoden</a></li>
+                    <li><a href="#krediet">Coolblue krediet</a></li>
+                    <li><a href="#cadeaukaart">Cadeaukaart</a></li>
+                </ul>
+            </nav>
+
+            <nav >
+                <h2>Informatie</h2>
+                <ul>
+                    <li><a href="#privacy">Privacy</a></li>
+                    <li><a href="#voorwaarden">Algemene voorwaarden</a></li>
+                    <li><a href="#cookies">Cookies</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <aside>
+            <p>
+                <small>&copy; 2024 Coolblue - Schoolproject Frontend Development</small>
+            </p>
+            <address>
+                <a href="https://github.com/jouw-username" target="_blank" rel="noopener noreferrer">
+                    GitHub Repository
+                </a>
+            </address>
+        </aside>
+    </footer>
+
+    <!-- Mobile bottom navigation -->
+    <nav aria-label="Mobiele navigatie">
+        <ul>
+            <li>
+                <a href="/" aria-label="Start" aria-current="page">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
+                        <path d="M10.707 2.293a1 1 0 0 0-1.414 0l-7 7a1 1 0 0 0 1.414 1.414L4 10.414V17a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-6.586l.293.293a1 1 0 0 0 1.414-1.414z"/>
+                    </svg>
+                    <small>start</small>
+                </a>
+            </li>
+            <li>
+                <a href="#search" aria-label="Zoeken">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
+                        <g fill-rule="evenodd">
+                            <path d="M8.125 12.083c2.49 0 4.375-1.937 4.375-4.166S10.614 3.75 8.125 3.75c-2.49 0-4.375 1.937-4.375 4.167s1.886 4.166 4.375 4.166m0 2.5C11.922 14.583 15 11.6 15 7.917c0-3.682-3.078-6.667-6.875-6.667S1.25 4.235 1.25 7.917s3.078 6.666 6.875 6.666"></path>
+                            <path d="M11.2 11.2a1.25 1.25 0 0 1 1.767 0l5.417 5.416a1.25 1.25 0 0 1-1.768 1.768L11.2 12.967a1.25 1.25 0 0 1 0-1.768Z"></path>
+                        </g>
+                    </svg>
+                    <small>search</small>
+                </a>
+            </li>
+            <li>
+                <a href="#stores" aria-label="Winkels">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
+                        <path d="M3 4a1 1 0 0 0 0 2h.5l.5 3 .5 3H15.5l.5-3 .5-3H17a1 1 0 1 0 0-2zm2.5 10a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m9 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/>
+                    </svg>
+                    <small>stores</small>
+                </a>
+            </li>
+            <li>
+                <a href="#cart" aria-label="Winkelwagen">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M2.5 1.25a1.25 1.25 0 1 0 0 2.5h1.982l1.366 8.939a1.25 1.25 0 0 0 1.235 1.061h9.226a1.25 1.25 0 0 0 1.205-.914l2.44-8.75a1.25 1.25 0 1 0-2.408-.672l-2.185 7.836H8.157L6.79 2.311A1.25 1.25 0 0 0 5.556 1.25zM10 16.875a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0m7.5 0a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0"></path>
+                    </svg>
+                    <small>cart</small>
+                </a>
+            </li>
+            <li>
+                <a href="#profile" aria-label="Profiel">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M15 6.25a5 5 0 1 1-10 0 5 5 0 0 1 10 0m-2.5 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"></path>
+                        <path d="M6.25 12.5a5 5 0 0 0-5 5 1.25 1.25 0 1 0 2.5 0 2.5 2.5 0 0 1 2.5-2.5h7.5a2.5 2.5 0 0 1 2.5 2.5 1.25 1.25 0 1 0 2.5 0 5 5 0 0 0-5-5z"></path>
+                    </svg>
+                    <small>profile</small>
+                </a>
+            </li>
+        </ul>
+    </nav>
     <script src="scripts/script.js"></script>
 </body>
 </html>
