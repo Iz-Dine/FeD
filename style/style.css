@@ -1,58 +1,12 @@
 /* ===========================
-CSS VARIABLES
+IMPORTS
 =========================== */
 
-:root {
-    /* Coolblue kleuren - Light mode */
-    --cb-color-primitive-orange-hotorange: #ff6c00;
-    --cb-color-primitive-white: #ffffff;
-    --cb-color-primary: #0090e3;
-    --cb-color-primary-dark: #0070b8;
-    --cb-color-primary-light: #e8f4fb;
-    --cb-color-background: #ffffff;
-    --cb-color-background-alt: #f7f7f7;
-    
-    /* Text colors */
-    --cb-color-text-primary: #1c1c1c;
-    --cb-color-text-secondary: #666;
-    --cb-color-text-inverse: #ffffff;
-    
-    /* Icon colors */
-    --cb-color-icon-interactive-inverse: #ffffff;
-    --cb-color-icon-accented: #0090e3;
-    --cb-color-icon-sentiment-positive: #ffa500;
-    --cb-color-icon-interactive-disabled: #e0e0e0;
-    
-    /* Status colors */
-    --cb-color-success: #4caf50;
-    --cb-color-warning: #ff9800;
-    --cb-color-error: #f44336;
-    
-    /* Border & shadows */
-    --cb-color-border: #e0e0e0;
-    --cb-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
-    --cb-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --cb-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-    
-    /* Spacing */
-    --cb-spacing-xs: 0.5rem;
-    --cb-spacing-sm: 1rem;
-    --cb-spacing-md: 1.5rem;
-    --cb-spacing-lg: 2rem;
-    --cb-spacing-xl: 3rem;
-    
-    /* Border radius */
-    --cb-radius-sm: 4px;
-    --cb-radius-md: 8px;
-    --cb-radius-lg: 12px;
-    
-    /* Transitions */
-    --cb-transition: 0.3s ease-in-out;
-}
-
+@import url("root.css");
+@import url("remedy.css");
 
 /* ===========================
-ASE TYPOGRAPHY
+BASE TYPOGRAPHY
 =========================== */
 
 html {
@@ -67,6 +21,8 @@ body {
     line-height: 1.5;
     color: var(--cb-color-text-primary);
     background-color: var(--cb-color-background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3 {
@@ -102,6 +58,10 @@ a {
     transition: color var(--cb-transition);
 }
 
+a:hover {
+    color: var(--cb-color-primary);
+}
+
 button {
     font-family: inherit;
     cursor: pointer;
@@ -121,21 +81,21 @@ button:active:not(:disabled) {
 
 /* Cursor pointers voor alle klikbare elementen */
 a,
-    button,
-        input[type="submit"],
-        input[type="button"],
-        label[for] {
-        cursor: pointer;
+button,
+input[type="submit"],
+input[type="button"],
+label[for] {
+    cursor: pointer;
 }
 
-    input[type="search"],
-    input[type="text"],
-    input[type="email"] {
+input[type="search"],
+input[type="text"],
+input[type="email"] {
     cursor: text;
 }
 
-ul {/* Can sanne over genomen in week 3 je kunt het puntje van je li aanpasen  */
-    list-style-type: "";
+ul {
+    list-style: none;
 }
 
 img {
@@ -168,7 +128,7 @@ body > a[href="#main"]:focus {
     top: 0;
 }
 
-/* Visually hidden labels */
+/* Visually hidden labels - VOOR ALLE FORM LABELS */
 form label {
     position: absolute;
     width: 1px;
@@ -179,6 +139,137 @@ form label {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
+}
+
+/* ===========================
+MOBILE MENU OVERLAY
+=========================== */
+
+/* Mobile menu aside */
+body > header > aside {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 85%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--cb-color-background);
+    box-shadow: var(--cb-shadow-lg);
+    z-index: 300;
+    transition: left var(--cb-transition);
+    overflow-y: auto;
+    padding-bottom: 2rem;
+}
+
+/* Show menu when open */
+body > header > aside[data-open] {
+    left: 0;
+}
+
+/* Menu header */
+body > header > aside > header {
+    background-color: var(--cb-color-primary);
+    color: var(--cb-color-text-inverse);
+    padding: var(--cb-spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+body > header > aside > header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cb-color-text-inverse);
+}
+
+/* Close button */
+body > header > aside > header button {
+    background: none;
+    border: none;
+    color: var(--cb-color-text-inverse);
+    font-size: 3rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body > header > aside > header button:hover {
+    opacity: 0.8;
+}
+
+/* Menu navigation */
+body > header > aside > nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+}
+
+body > header > aside > nav li {
+    border-bottom: 1px solid var(--cb-color-border);
+}
+
+body > header > aside > nav a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--cb-spacing-md);
+    color: var(--cb-color-text-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    min-height: 60px;
+    transition: background-color var(--cb-transition);
+}
+
+/* Items without arrows have normal weight */
+body > header > aside > nav li:nth-child(n+12) a {
+    font-weight: 400;
+}
+
+body > header > aside > nav a:hover {
+    background-color: var(--cb-color-background-alt);
+}
+
+body > header > aside > nav a em {
+    font-size: 1.5rem;
+    color: var(--cb-color-text-secondary);
+    font-style: normal;
+}
+
+/* Backdrop */
+body > header > aside::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--cb-transition);
+    z-index: -1;
+}
+
+body > header > aside[data-open]::before {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Hide mobile menu on desktop */
+@media (min-width: 768px) {
+    body > header > aside {
+        display: none;
+    }
 }
 
 /* ===========================
@@ -243,7 +334,7 @@ body > header > nav[aria-label="Hoofdnavigatie"] > ul {
 }
 
 /* ===========================
-MOBILE SEARCH (below nav)
+MOBILE SEARCH FORM 
 =========================== */
 
 body > header > form[role="search"] {
@@ -252,6 +343,8 @@ body > header > form[role="search"] {
     gap: 0;
     width: 100%;
     padding: 0 var(--cb-spacing-sm) var(--cb-spacing-sm);
+    background-color: var(--cb-color-background);
+    padding-top: var(--cb-spacing-sm);
 }
 
 body > header > form[role="search"] input {
@@ -268,11 +361,12 @@ body > header > form[role="search"] input {
 }
 
 body > header > form[role="search"] input:focus {
-    border-color: var(--cb-color-primary-dark);
+    border-color: var(--cb-color-primitive-orange-hotorange);
 }
 
 body > header > form[role="search"] input::placeholder {
-    color: var(--cb-color-text-secondary);
+    color: var(--cb-color-text-secondary); 
+    font-style: italic;
 }
 
 /* MOBILE: Inverted button colors */
@@ -289,7 +383,7 @@ body > header > form[role="search"] button {
 }
 
 body > header > form[role="search"] button:hover {
-    background-color: var(--cb-color-primary-dark);
+    background-color: var(--cb-color-primitive-orange-hotorange);
 }
 
 /* ===========================
@@ -300,7 +394,7 @@ body > header > nav[aria-label="Productcategorieën"] {
     background-color: var(--cb-color-background-alt);
     border-top: 1px solid var(--cb-color-border);
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    
 }
 
 body > header > nav[aria-label="Productcategorieën"] ul {
@@ -441,8 +535,6 @@ main > section > h2 {
     margin-bottom: var(--cb-spacing-md);
     color: var(--cb-color-text-primary);
 }
-
-
 
 /* ===========================
 CATEGORY GRID
@@ -769,7 +861,7 @@ TABLET (768px+)
     }
     
     body > header > nav[aria-label="Hoofdnavigatie"] > form input:focus {
-        border-color: var(--cb-color-primary-dark);
+        border-color: var(--cb-color-primitive-orange-hotorange);
     }
     
     /* Normal colors for desktop search button */
@@ -929,7 +1021,7 @@ body > nav[aria-label="Mobiele navigatie"] a[aria-current="page"] {
 body > nav[aria-label="Mobiele navigatie"] a:hover,
 body > nav[aria-label="Mobiele navigatie"] a:focus-visible {
     background-color: var(--cb-color-background-alt);
-    color: var(--cb-color-primary);
+    color: var(--cb-color-primitive-orange-hotorange);
 }
 
 body > nav[aria-label="Mobiele navigatie"] a:active {
@@ -965,7 +1057,139 @@ body > nav[aria-label="Mobiele navigatie"] svg {
 }
 
 /* ===========================
-   REDUCED MOTION
+SCROLL TO TOP BUTTON
+=========================== */
+
+button[data-scroll-top] {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--cb-color-primary);
+    color: var(--cb-color-text-inverse);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--cb-transition), visibility var(--cb-transition), transform var(--cb-transition);
+    z-index: 999;
+    box-shadow: var(--cb-shadow-md);
+}
+
+button[data-scroll-top][data-visible] {
+    opacity: 1;
+    visibility: visible;
+}
+
+button[data-scroll-top]:hover {
+    background-color: var(--cb-color-primary-dark);
+    transform: scale(1.1);
+}
+
+button[data-scroll-top]:active {
+    transform: scale(1);
+}
+
+/* ===========================
+NOTIFICATION SYSTEM
+=========================== */
+
+aside[role="status"] {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 1rem 1.5rem;
+    border-radius: var(--cb-radius-md);
+    box-shadow: var(--cb-shadow-lg);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    color: var(--cb-color-text-inverse);
+    animation: slideIn var(--cb-transition);
+}
+
+aside[role="status"][data-closing] {
+    animation: slideOut var(--cb-transition);
+}
+
+aside[role="status"][data-notification="success"] {
+    background-color: var(--cb-color-success);
+}
+
+aside[role="status"][data-notification="warning"] {
+    background-color: var(--cb-color-warning);
+}
+
+aside[role="status"][data-notification="error"] {
+    background-color: var(--cb-color-error);
+}
+
+aside[role="status"][data-notification="info"] {
+    background-color: var(--cb-color-primary);
+}
+
+aside[role="status"] strong {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+aside[role="status"] p {
+    flex: 1;
+    margin: 0;
+}
+
+aside[role="status"] button {
+    background: transparent;
+    border: none;
+    color: var(--cb-color-text-inverse);
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-left: auto;
+}
+
+aside[role="status"] button:hover {
+    opacity: 0.8;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* ===========================
+REDUCED MOTION
 =========================== */
 
 @media (prefers-reduced-motion: reduce) {

@@ -6,9 +6,6 @@
     <meta name="description" content="Coolblue - Voor 23:59 besteld, morgen gratis bezorgd. De beste elektronica, huishoudelijke apparaten en meer.">
     <title>Coolblue - Voor 23:59 besteld, morgen gratis bezorgd</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/root.css">
-    <link rel="stylesheet" href="style/remedy.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- Skip link -->
@@ -16,10 +13,37 @@
 
     <!-- Header -->
     <header>
+        <!-- Mobile Menu Overlay -->
+        <aside aria-labelledby="mobile-menu-title">
+            <div>
+                <h2 id="mobile-menu-title">Menu</h2>
+                <button aria-label="Menu sluiten" type="button">×</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#laptops">Computers & tablets<em>›</em></a></li>
+                    <li><a href="#smartphones">Telefonie<em>›</em></a></li>
+                    <li><a href="#tvs">Beeld & geluid<em>›</em></a></li>
+                    <li><a href="#gaming">Gaming<em>›</em></a></li>
+                    <li><a href="#zakelijk">Zakelijk & thuiswerken<em>›</em></a></li>
+                    <li><a href="#huishouden">Huishouden & wonen<em>›</em></a></li>
+                    <li><a href="#keuken">Keuken<em>›</em></a></li>
+                    <li><a href="#sport">Sport & verzorging<em>›</em></a></li>
+                    <li><a href="#foto">Foto & video<em>›</em></a></li>
+                    <li><a href="#energie">Coolblue Energie<em>›</em></a></li>
+                    <li><a href="#acties">Acties & merken<em>›</em></a></li>
+                    <li><a href="#taal">Taal: Nederlands (NL)<em>›</em></a></li>
+                    <li><a href="#black-friday">Black Friday</a></li>
+                    <li><a href="#mijn-coolblue">Mijn Coolblue</a></li>
+                    <li><a href="#klantenservice">Klantenservice</a></li>
+                </ul>
+            </nav>
+        </aside>
+
         <!-- Top navigation -->
         <nav aria-label="Hoofdnavigatie">
             <!-- Hamburger menu -->
-            <button aria-label="Menu openen" aria-expanded="false">
+            <button aria-label="Menu openen" aria-expanded="false" type="button">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="var(--cb-color-icon-interactive-inverse)" width="2.4rem" height="2.4rem" aria-hidden="true">
                     <path d="M17.5 5a1.25 1.25 0 1 0 0-2.5h-15a1.25 1.25 0 0 0 0 2.5zm1.25 5c0 .69-.56 1.25-1.25 1.25h-15a1.25 1.25 0 1 1 0-2.5h15c.69 0 1.25.56 1.25 1.25m0 6.25c0 .69-.56 1.25-1.25 1.25h-15a1.25 1.25 0 1 1 0-2.5h15c.69 0 1.25.56 1.25 1.25"></path>
                 </svg>
@@ -37,8 +61,8 @@
             <form role="search" action="/zoeken" method="get">
                 <label for="search-desktop">Zoeken</label>
                 <input 
+                    type="search"
                     id="search-desktop"
-                    type="search" 
                     name="q"
                     placeholder="Waar ben je naar op zoek?" 
                     aria-label="Zoeken naar producten"
@@ -84,8 +108,8 @@
         <form role="search" action="/zoeken" method="get">
             <label for="search-mobile">Zoeken</label>
             <input 
+                type="search"
                 id="search-mobile"
-                type="search" 
                 name="q"
                 placeholder="Waar ben je naar op zoek?" 
                 aria-label="Zoeken naar producten"
@@ -127,9 +151,10 @@
             <p>30 dagen bedenktijd</p>
             <a href="#deals">Bekijk alle deals</a>
         </section>
+
         <!-- Product categories -->
         <section aria-labelledby="categories">
-            <h2 id="categories">Populaire categorieën</h2>
+            <h2 id="categories">Blader door onze categorieën</h2>
             <ul>
                 <li>
                     <article>
@@ -145,6 +170,7 @@
                         <a href="#smartphones">
                             <h3>Smartphones</h3>
                             <img src="images/category-smartphones.jpg" alt="" loading="lazy" width="400" height="300">
+                            
                         </a>
                     </article>
                 </li>
@@ -153,15 +179,15 @@
                         <a href="#tvs">
                             <h3>TV's</h3>
                             <img src="images/category-tvs.jpg" alt="" loading="lazy" width="400" height="300">
+                            
                         </a>
                     </article>
                 </li>
                 <li>
                     <article>
-                        <a href="#gaming">
+                        <a href="#gaming">  
                             <h3>Gaming</h3>
                             <img src="images/category-gaming.jpg" alt="" loading="lazy" width="400" height="300">
-                            
                         </a>
                     </article>
                 </li>
@@ -173,15 +199,16 @@
             <h2 id="featured">Aanbevolen voor jou</h2>
             <ul>
                 <li>
+                    
                     <article itemscope itemtype="https://schema.org/Product">
-                        <h3></h3>
+                        <h2 hidden itemprop=" product name">Apple MacBook Air M2 13 inch</h2>
                         <img src="images/product-laptop.jpg" alt="Apple MacBook Air M2 13 inch" loading="lazy" width="400" height="400" itemprop="image">
                         <button aria-label="Toevoegen aan verlanglijst" aria-pressed="false">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M6.273 3.875c-1.685 0-2.523 1.36-2.523 2.649 0 1.27.628 2.676 1.948 4.784.712 1.134 2.368 3.07 3.668 4.527a.84.84 0 0 0 1.269 0c1.3-1.454 2.956-3.39 3.667-4.527 1.32-2.108 1.948-3.514 1.948-4.784 0-1.292-.837-2.649-2.523-2.649-1.003 0-1.893.66-2.279 1.644a1.537 1.537 0 0 1-2.896 0c-.386-.985-1.274-1.644-2.28-1.644Zm6.237 13.697-.049.058a3.26 3.26 0 0 1-4.919 0m4.968-.058c1.266-1.417 3.041-3.48 3.881-4.822 1.312-2.096 2.359-4.093 2.359-6.226 0-2.36-1.62-5.274-5.023-5.274-1.492 0-2.82.703-3.726 1.8-.908-1.1-2.236-1.8-3.728-1.8-3.404 0-5.023 2.917-5.023 5.274 0 2.133 1.047 4.13 2.359 6.226v.001c.852 1.356 2.665 3.459 3.933 4.88"></path>
                             </svg>
                         </button>
-                        
+                        <!--https://schema.org-->
                         <section>
                             <h3 itemprop="name">Apple MacBook Air M2 13 inch</h3>
                             <aside aria-label="Beoordeling 4.5 van 5 sterren, 123 recensies">
@@ -223,68 +250,6 @@
                         </section>
                     </article>
                 </li>
-                <li>
-                    <article itemscope itemtype="https://schema.org/Product">
-                        <img src="images/product-iphone.jpg" alt="Apple iPhone 15 Pro 128GB" loading="lazy" width="400" height="400" itemprop="image">
-                        <button aria-label="Toevoegen aan verlanglijst" aria-pressed="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M6.273 3.875c-1.685 0-2.523 1.36-2.523 2.649 0 1.27.628 2.676 1.948 4.784.712 1.134 2.368 3.07 3.668 4.527a.84.84 0 0 0 1.269 0c1.3-1.454 2.956-3.39 3.667-4.527 1.32-2.108 1.948-3.514 1.948-4.784 0-1.292-.837-2.649-2.523-2.649-1.003 0-1.893.66-2.279 1.644a1.537 1.537 0 0 1-2.896 0c-.386-.985-1.274-1.644-2.28-1.644Zm6.237 13.697-.049.058a3.26 3.26 0 0 1-4.919 0m4.968-.058c1.266-1.417 3.041-3.48 3.881-4.822 1.312-2.096 2.359-4.093 2.359-6.226 0-2.36-1.62-5.274-5.023-5.274-1.492 0-2.82.703-3.726 1.8-.908-1.1-2.236-1.8-3.728-1.8-3.404 0-5.023 2.917-5.023 5.274 0 2.133 1.047 4.13 2.359 6.226v.001c.852 1.356 2.665 3.459 3.933 4.88"></path>
-                            </svg>
-                        </button>
-                        
-                        <section>
-                            <h3 itemprop="name">Apple iPhone 15 Pro 128GB</h3>
-                            
-                            <aside aria-label="Beoordeling 4.8 van 5 sterren, 456 recensies">
-                                <strong aria-hidden="true">★★★★★</strong>
-                                <data value="4.8" itemprop="ratingValue">4.8</data>
-                                <em>(<data value="456" itemprop="reviewCount">456</data>)</em>
-                            </aside>
-                            
-                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <data value="1159" itemprop="price">€ 1.159,-</data>
-                                <meta itemprop="priceCurrency" content="EUR">
-                                <link itemprop="availability" href="https://schema.org/InStock">
-                            </p>
-                            
-                            <p>Morgen gratis bezorgd</p>
-                            
-                            <button type="button">In winkelwagen</button>
-                        </section>
-                    </article>
-                </li>
-
-                <li>
-                    <article itemscope itemtype="https://schema.org/Product">
-                        <img src="images/product-tv.jpg" alt="Samsung 55 inch 4K QLED TV" loading="lazy" width="400" height="400" itemprop="image">
-                        <button aria-label="Toevoegen aan verlanglijst" aria-pressed="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="2.4rem" height="2.4rem" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M6.273 3.875c-1.685 0-2.523 1.36-2.523 2.649 0 1.27.628 2.676 1.948 4.784.712 1.134 2.368 3.07 3.668 4.527a.84.84 0 0 0 1.269 0c1.3-1.454 2.956-3.39 3.667-4.527 1.32-2.108 1.948-3.514 1.948-4.784 0-1.292-.837-2.649-2.523-2.649-1.003 0-1.893.66-2.279 1.644a1.537 1.537 0 0 1-2.896 0c-.386-.985-1.274-1.644-2.28-1.644Zm6.237 13.697-.049.058a3.26 3.26 0 0 1-4.919 0m4.968-.058c1.266-1.417 3.041-3.48 3.881-4.822 1.312-2.096 2.359-4.093 2.359-6.226 0-2.36-1.62-5.274-5.023-5.274-1.492 0-2.82.703-3.726 1.8-.908-1.1-2.236-1.8-3.728-1.8-3.404 0-5.023 2.917-5.023 5.274 0 2.133 1.047 4.13 2.359 6.226v.001c.852 1.356 2.665 3.459 3.933 4.88"></path>
-                            </svg>
-                        </button>
-                        
-                        <section>
-                            <h3 itemprop="name">Samsung 55 inch 4K QLED TV</h3>
-                            
-                            <aside aria-label="Beoordeling 4.3 van 5 sterren, 89 recensies">
-                                <strong aria-hidden="true">★★★★☆</strong>
-                                <data value="4.3" itemprop="ratingValue">4.3</data>
-                                <em>(<data value="89" itemprop="reviewCount">89</data>)</em>
-                            </aside>
-                            
-                            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <data value="799" itemprop="price">€ 799,-</data>
-                                <data value="999">€ 999,-</data>
-                                <meta itemprop="priceCurrency" content="EUR">
-                                <link itemprop="availability" href="https://schema.org/InStock">
-                            </p>
-                            
-                            <p>Morgen gratis bezorgd</p>
-                            
-                            <button type="button">In winkelwagen</button>
-                        </section>
-                    </article>
-                </li>
             </ul>
         </section>
     </main>
@@ -292,8 +257,9 @@
     <!-- Footer -->
     <footer>
         <section>
+            <h2 id="service">Service</h2>
             <nav aria-labelledby="service">
-                <h2 id="service">Service</h2>
+                
                 <ul>
                     <li><a href="#klantenservice">Klantenservice</a></li>
                     <li><a href="#retourneren">Retourneren</a></li>
@@ -381,6 +347,7 @@
             </li>
         </ul>
     </nav>
+
     <script src="scripts/script.js"></script>
 </body>
 </html>
