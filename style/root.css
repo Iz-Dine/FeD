@@ -1,5 +1,5 @@
 /* ===========================
-   CUSTOM FONTS
+CUSTOM FONTS
 =========================== */
 
 @font-face {
@@ -26,41 +26,66 @@
   font-display: swap;
 }
 
-
-
 /* ===========================
-   CSS VARIABLES
+CSS VARIABLES - 
 =========================== */
 
 :root {
-    /* Coolblue kleuren */
+    /* CRITICAL: Enable automatic light/dark switching */
+    color-scheme: light dark;
+    
+    /* Coolblue kleuren - Light & Dark variants */
+    --cb-light-bg: #ffffff;
+    --cb-light-bg-alt: #f7f7f7;
+    --cb-light-text: #1c1c1c;
+    --cb-light-text-secondary: #666;
+    --cb-light-border: #e0e0e0;
+    
+    --cb-dark-bg: #1c1c1c;
+    --cb-dark-bg-alt: #2d2d2d;
+    --cb-dark-text: #ffffff;
+    --cb-dark-text-secondary: #b0b0b0;
+    --cb-dark-border: #404040;
+    
+    /* Apply light-dark() function */
+    --cb-color-background: light-dark(var(--cb-light-bg), var(--cb-dark-bg));
+    --cb-color-background-alt: light-dark(var(--cb-light-bg-alt), var(--cb-dark-bg-alt));
+    --cb-color-text-primary: light-dark(var(--cb-light-text), var(--cb-dark-text));
+    --cb-color-text-secondary: light-dark(var(--cb-light-text-secondary), var(--cb-dark-text-secondary));
+    --cb-color-border: light-dark(var(--cb-light-border), var(--cb-dark-border));
+    
+    /* Coolblue brand colors  */
     --cb-color-primitive-orange-hotorange: #ff6c00;
     --cb-color-primitive-white: #ffffff;
     --cb-color-primary: #0090e3;
     --cb-color-primary-dark: #0070b8;
     --cb-color-primary-light: #e8f4fb;
-    --cb-color-background: #ffffff;
-    --cb-color-background-alt: #f7f7f7;
-    
-    /* Text colors */
-    --cb-color-text-primary: #1c1c1c;
-    --cb-color-text-secondary: #666;
     --cb-color-text-inverse: #ffffff;
     
     /* Icon colors */
     --cb-color-icon-interactive-inverse: #ffffff;
     --cb-color-icon-accented: #0090e3;
+    --cb-color-icon-sentiment-positive: #ffa500;
+    --cb-light-icon-disabled: #e0e0e0;
+    --cb-dark-icon-disabled: #555;
+    --cb-color-icon-interactive-disabled: light-dark(var(--cb-light-icon-disabled), var(--cb-dark-icon-disabled));
     
     /* Status colors */
     --cb-color-success: #4caf50;
     --cb-color-warning: #ff9800;
     --cb-color-error: #f44336;
     
-    /* Border & shadows */
-    --cb-color-border: #e0e0e0;
-    --cb-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
-    --cb-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --cb-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    /* Shadows - adapt for dark mode */
+    --cb-light-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --cb-light-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --cb-light-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --cb-dark-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+    --cb-dark-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5);
+    --cb-dark-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+    
+    --cb-shadow-sm: light-dark(var(--cb-light-shadow-sm), var(--cb-dark-shadow-sm));
+    --cb-shadow-md: light-dark(var(--cb-light-shadow-md), var(--cb-dark-shadow-md));
+    --cb-shadow-lg: light-dark(var(--cb-light-shadow-lg), var(--cb-dark-shadow-lg));
     
     /* Spacing */
     --cb-spacing-xs: 0.5rem;
