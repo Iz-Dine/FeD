@@ -439,6 +439,170 @@ body > header > nav[aria-label="Productcategorieën"] a:hover::after {
 }
 
 /* ===========================
+CAROUSEL IN HERO - Alleen op tablet/mobile
+=========================== */
+
+/* Hide carousel on desktop */
+@media (min-width: 1024px) {
+    main > section:first-of-type .carousel-container {
+        display: none;
+    }
+}
+
+/* Show carousel on mobile/tablet */
+@media (max-width: 1023px) {
+    main > section:first-of-type .carousel-container {
+        position: relative;
+        margin-top: var(--cb-spacing-lg);
+        overflow: hidden;
+        border-radius: var(--cb-radius-md);
+    }
+    
+    main > section:first-of-type .carousel-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    main > section:first-of-type .carousel-slide {
+        min-width: 100%;
+        padding: var(--cb-spacing-md);
+        display: flex;
+        flex-direction: column;
+        gap: var(--cb-spacing-md);
+    }
+    
+    @media (min-width: 768px) {
+        main > section:first-of-type .carousel-slide {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    
+    main > section:first-of-type .slide-products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--cb-spacing-sm);
+    }
+    
+    main > section:first-of-type .product-card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: var(--cb-spacing-sm);
+        border-radius: var(--cb-radius-sm);
+        text-align: center;
+        transition: transform 0.2s, background-color 0.2s;
+        cursor: pointer;
+    }
+    
+    main > section:first-of-type .product-card:hover {
+        transform: translateY(-4px);
+        background: rgba(255, 255, 255, 0.25);
+    }
+    
+    main > section:first-of-type .product-card .product-image {
+        font-size: 2.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    main > section:first-of-type .product-card .product-name {
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
+        font-weight: 500;
+    }
+    
+    main > section:first-of-type .product-card .product-price {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    /* Navigation buttons */
+    main > section:first-of-type .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        color: var(--cb-color-primary);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--cb-shadow-md);
+        transition: all 0.2s;
+        z-index: 10;
+        border: none;
+        cursor: pointer;
+    }
+    
+    main > section:first-of-type .carousel-btn:hover {
+        background-color: var(--cb-color-primitive-white);
+        transform: translateY(-50%) scale(1.1);
+    }
+    
+    main > section:first-of-type .carousel-prev {
+        left: var(--cb-spacing-xs);
+    }
+    
+    main > section:first-of-type .carousel-next {
+        right: var(--cb-spacing-xs);
+    }
+    
+    /* Progress bar */
+    main > section:first-of-type .carousel-progress {
+        position: absolute;
+        bottom: var(--cb-spacing-sm);
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: var(--cb-spacing-xs);
+        z-index: 10;
+    }
+    
+    main > section:first-of-type .progress-bar {
+        width: 50px;
+        height: 3px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 2px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        padding: 0;
+    }
+    
+    main > section:first-of-type .progress-bar::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        background-color: var(--cb-color-primitive-white);
+        transition: width 0.1s linear;
+    }
+    
+    main > section:first-of-type .progress-bar[aria-selected="true"]::after {
+        animation: carousel-progress-fill 5s linear forwards;
+    }
+    
+    @keyframes carousel-progress-fill {
+        from { width: 0%; }
+        to { width: 100%; }
+    }
+    
+    main > section:first-of-type .progress-bar:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* FOOTER H2 FIX */
+body > footer nav h2 {
+    margin-bottom: var(--cb-spacing-xs);
+}
+
+/* ===========================
 MAIN CONTENT
 =========================== */
 
@@ -446,7 +610,7 @@ main {
     min-height: 50vh;
 }
 
-/* Main H1 - visually hidden but available for SEO and screen readers */
+/* Main H1 - visually hidden but available  screen readers */
 main > h1 {
     position: absolute;
     width: 1px;
@@ -758,7 +922,9 @@ body > footer nav h2 {
     font-size: 1.125rem;
     margin-bottom: var(--cb-spacing-sm);
     font-weight: 700;
-}
+    padding: 0;
+    margin: 0;
+}       
 
 body > footer nav ul {
     display: flex;
@@ -987,7 +1153,7 @@ body > nav[aria-label="Mobiele navigatie"] {
     border-top: 1px solid var(--cb-color-border);
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     z-index: 100;
-    padding-bottom: env(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 body > nav[aria-label="Mobiele navigatie"] ul {
@@ -1187,6 +1353,540 @@ aside[role="status"] button:hover {
         opacity: 0;
     }
 }
+
+/* ===========================
+VOEG TOE AAN EINDE VAN style/style.css
+=========================== */
+
+/* CAROUSEL IN HERO - Alleen op tablet/mobile */
+@media (max-width: 1024px) {
+    main > section:first-of-type .carousel-container {
+        position: relative;
+        margin-top: var(--cb-spacing-lg);
+        overflow: hidden;
+        border-radius: var(--cb-radius-md);
+    }
+    
+    main > section:first-of-type .carousel-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    main > section:first-of-type .carousel-slide {
+        min-width: 100%;
+        padding: var(--cb-spacing-md);
+        display: flex;
+        flex-direction: column;
+        gap: var(--cb-spacing-md);
+    }
+    
+    @media (min-width: 768px) {
+        main > section:first-of-type .carousel-slide {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    
+    main > section:first-of-type .slide-products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--cb-spacing-sm);
+    }
+    
+    main > section:first-of-type .product-card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: var(--cb-spacing-sm);
+        border-radius: var(--cb-radius-sm);
+        text-align: center;
+        transition: transform 0.2s, background-color 0.2s;
+        cursor: pointer;
+    }
+    
+    main > section:first-of-type .product-card:hover {
+        transform: translateY(-4px);
+        background: rgba(255, 255, 255, 0.25);
+    }
+    
+    main > section:first-of-type .product-card .product-image {
+        font-size: 2.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    main > section:first-of-type .product-card .product-name {
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
+        font-weight: 500;
+    }
+    
+    main > section:first-of-type .product-card .product-price {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    /* Navigation buttons */
+    main > section:first-of-type .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        color: var(--cb-color-primary);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--cb-shadow-md);
+        transition: all 0.2s;
+        z-index: 10;
+        border: none;
+        cursor: pointer;
+    }
+    
+    main > section:first-of-type .carousel-btn:hover {
+        background-color: var(--cb-color-primitive-white);
+        transform: translateY(-50%) scale(1.1);
+    }
+    
+    main > section:first-of-type .carousel-prev {
+        left: var(--cb-spacing-xs);
+    }
+    
+    main > section:first-of-type .carousel-next {
+        right: var(--cb-spacing-xs);
+    }
+    
+    /* Progress bar */
+    main > section:first-of-type .carousel-progress {
+        position: absolute;
+        bottom: var(--cb-spacing-sm);
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: var(--cb-spacing-xs);
+        z-index: 10;
+    }
+    
+    main > section:first-of-type .progress-bar {
+        width: 50px;
+        height: 3px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 2px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        padding: 0;
+    }
+    
+    main > section:first-of-type .progress-bar::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        background-color: var(--cb-color-primitive-white);
+        transition: width 0.1s linear;
+    }
+    
+    main > section:first-of-type .progress-bar[aria-selected="true"]::after {
+        animation: carousel-progress-fill 5s linear forwards;
+    }
+    
+    @keyframes carousel-progress-fill {
+        from { width: 0%; }
+        to { width: 100%; }
+    }
+    
+    main > section:first-of-type .progress-bar:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+    /* Hide carousel on desktop */
+    @media (min-width: 1024px) {
+    main > section:first-of-type .carousel-container {
+        display: none;
+    }
+    }
+
+    /* SEARCH TAG STYLING */
+    search  {
+    flex: 1;
+    max-width: 600px;
+    }
+
+    /* 1. Footer hover state WIT in plaats van blauw */
+    body > footer nav a:hover {
+    color: var(--cb-color-primitive-white) ;
+    }
+
+/* ===========================
+HERO CAROUSEL FIXES + NIEUWE CONTENT
+Voeg toe aan einde van style/style.css
+=========================== */
+
+/* ===========================
+FIX: Hero Carousel vanaf 770px - Content gecentreerd
+=========================== */
+
+/* Fix voor tablet/desktop alignment */
+@media (min-width: 770px) and (max-width: 1023px) {
+    main > section:first-of-type .carousel-container {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    main > section:first-of-type .carousel-slide {
+        padding: var(--cb-spacing-lg);
+        justify-content: center;
+    }
+    
+    main > section:first-of-type .slide-products {
+        max-width: 600px;
+    }
+}
+
+/* ===========================
+NIEUWE: 3 Afbeeldingen Carousel (mobile)
+=========================== */
+
+/* Container voor de 3 afbeeldingen */
+.images-carousel-section {
+    margin: var(--cb-spacing-xl) var(--cb-spacing-sm);
+}
+
+/* Base carousel - alleen zichtbaar op mobile */
+.carousel {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .carousel {
+        display: block;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        anchor-name: --carousel;
+        
+        /* Verberg scrollbar maar blijf scrollbaar */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+    }
+    
+    .carousel::-webkit-scrollbar {
+        display: none; /* Chrome/Safari/Opera */
+    }
+    
+    .carousel__wrapper {
+        display: flex;
+        gap: var(--cb-spacing-sm);
+        padding: var(--cb-spacing-sm);
+    }
+    
+    .carousel__slide {
+        min-width: 85%;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        flex-shrink: 0;
+        
+        border-radius: var(--cb-radius-lg);
+        overflow: hidden;
+        box-shadow: var(--cb-shadow-md);
+        transition: transform 0.3s;
+    }
+    
+    .carousel__slide:active {
+        transform: scale(0.98);
+    }
+    
+    .carousel__slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+/* Desktop: Grid van 3 afbeeldingen */
+@media (min-width: 768px) {
+    .images-carousel-section {
+        max-width: 1400px;
+        margin: var(--cb-spacing-xl) auto;
+        padding: 0 var(--cb-spacing-lg);
+    }
+    
+    .carousel__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--cb-spacing-lg);
+    }
+    
+    .carousel__slide {
+        border-radius: var(--cb-radius-lg);
+        overflow: hidden;
+        box-shadow: var(--cb-shadow-md);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+    
+    .carousel__slide:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--cb-shadow-lg);
+    }
+    
+    .carousel__slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s;
+    }
+    
+    .carousel__slide:hover img {
+        transform: scale(1.05);
+    }
+}
+
+/* ===========================
+3 LINKS MET SVG ICONS
+=========================== */
+
+/* Container voor de 3 links */
+.info-links-section {
+    background: var(--cb-color-background-alt);
+    padding: var(--cb-spacing-lg) var(--cb-spacing-sm);
+    margin-top: var(--cb-spacing-xl);
+}
+
+.info-links-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--cb-spacing-md);
+}
+
+@media (min-width: 768px) {
+    .info-links-wrapper {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: var(--cb-spacing-lg);
+    }
+}
+
+/* Assortiment link styling */
+.assortiment-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--cb-spacing-xs);
+    padding: var(--cb-spacing-sm);
+    color: var(--cb-color-primary);
+    font-weight: 600;
+    transition: all var(--cb-transition);
+    border-radius: var(--cb-radius-md);
+    text-align: center;
+    justify-content: center;
+}
+
+.assortiment-link:hover {
+    background: rgba(0, 144, 227, 0.1);
+    transform: translateX(4px);
+}
+
+.assortiment-link svg {
+    transition: transform var(--cb-transition);
+}
+
+.assortiment-link:hover svg {
+    transform: translateX(4px);
+}
+
+/* Info links (klantbeoordeling, facebook, bezorging) */
+.info-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--cb-spacing-md);
+}
+
+@media (min-width: 768px) {
+    .info-links {
+        flex-direction: row;
+        gap: var(--cb-spacing-xl);
+    }
+}
+
+.info-link {
+    display: flex;
+    align-items: center;
+    gap: var(--cb-spacing-xs);
+    padding: var(--cb-spacing-xs);
+    color: var(--cb-color-text-primary);
+    transition: all var(--cb-transition);
+    border-radius: var(--cb-radius-sm);
+}
+
+.info-link:hover {
+    transform: translateY(-2px);
+    color: var(--cb-color-primary);
+}
+
+.info-link-icon {
+    flex-shrink: 0;
+}
+
+.info-link-text {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.info-link-text strong {
+    color: var(--cb-color-primary);
+    font-weight: 700;
+}
+
+/* Mobiel: center align */
+@media (max-width: 767px) {
+    .assortiment-link,
+    .info-link {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* ===========================
+SCROLL BUTTONS (experimenteel)
+Als browser ondersteunt ::scroll-button
+=========================== */
+
+@supports (selector(::scroll-button(*))) {
+    .carousel--scroll-buttons {
+        position: relative;
+    }
+    
+    .carousel--scroll-buttons::scroll-button(*) {
+        position: fixed;
+        position-anchor: --carousel;
+        position-visibility: always;
+        font-family: "Material Symbols Outlined", sans-serif;
+        background: var(--cb-color-background);
+        border: 2px solid var(--cb-color-border);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--cb-shadow-md);
+        transition: all 0.3s;
+        z-index: 10;
+    }
+    
+    .carousel--scroll-buttons::scroll-button(right) {
+        position-area: inline-end center;
+        content: 'arrow_forward' / 'Next';
+    }
+    
+    .carousel--scroll-buttons::scroll-button(left) {
+        position-area: inline-start center;
+        content: 'arrow_back' / 'Previous';
+    }
+    
+    .carousel--scroll-buttons::scroll-button(*):hover {
+        background: var(--cb-color-primary);
+        color: var(--cb-color-text-inverse);
+        border-color: var(--cb-color-primary);
+        transform: scale(1.1);
+    }
+}
+
+/* ===========================
+FALLBACK: Manual scroll buttons (voor browsers zonder ::scroll-button)
+=========================== */
+
+.carousel-nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--cb-spacing-sm);
+    margin-top: var(--cb-spacing-sm);
+}
+
+@media (min-width: 768px) {
+    .carousel-nav-buttons {
+        display: none; /* Niet nodig op desktop */
+    }
+}
+
+.carousel-nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--cb-color-background);
+    border: 2px solid var(--cb-color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: var(--cb-shadow-sm);
+}
+
+.carousel-nav-btn:hover {
+    background: var(--cb-color-primary);
+    color: var(--cb-color-text-inverse);
+    border-color: var(--cb-color-primary);
+    transform: scale(1.1);
+}
+
+.carousel-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* ===========================
+DOTS INDICATOR
+=========================== */
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: var(--cb-spacing-xs);
+    margin-top: var(--cb-spacing-sm);
+    padding: var(--cb-spacing-xs);
+}
+
+@media (min-width: 768px) {
+    .carousel-dots {
+        display: none; /* Niet nodig op desktop */
+    }
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--cb-color-border);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    padding: 0;
+}
+
+.carousel-dot.active {
+    background: var(--cb-color-primary);
+    width: 24px;
+    border-radius: 4px;
+}
+
+.carousel-dot:hover {
+    background: var(--cb-color-primary);
+    opacity: 0.7;
+}
+
 
 /* ===========================
 REDUCED MOTION
