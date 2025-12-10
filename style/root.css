@@ -3,32 +3,43 @@ CUSTOM FONTS
 =========================== */
 
 @font-face {
-  font-family: "OpenSans";
-  src: url("./fonts/OpenSans-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+font-family: "OpenSans";
+src: url("./fonts/OpenSans-Regular.woff2") format("woff2");
+font-weight: 400;
+font-style: normal;
+font-display: swap;
 }
 
 @font-face {
-  font-family: "OpenSans";
-  src: url("./fonts/OpenSans-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+font-family: "OpenSans";
+src: url("./fonts/OpenSans-Bold.woff2") format("woff2");
+font-weight: 700;
+font-style: normal;
+font-display: swap;
 }
 
 @font-face {
-  font-family: "Dobora";
-  src: url("./fonts/Dobora-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+font-family: "Dobora";
+src: url("./fonts/Dobora-Medium.woff2") format("woff2");
+font-weight: 500;
+font-style: normal;
+font-display: swap;
 }
 
 /* ===========================
 CSS VARIABLES - 
 =========================== */
+/* ===========================
+CSS RESET
+=========================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 :root {
     /* CRITICAL: Enable automatic light/dark switching */
@@ -119,8 +130,7 @@ body {
     line-height: 1.5;
     color: var(--cb-color-text-primary);
     background-color: var(--cb-color-background);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+
 }
 
 h1, h2, h3 {
@@ -191,9 +201,9 @@ input[type="text"],
 input[type="email"] {
     cursor: text;
 }
-
+/* tip van sanne  */
 ul {
-    list-style: none;
+    list-style: " ";
 }
 
 img {
@@ -207,3 +217,58 @@ img {
     outline-offset: 2px;
 }
 
+
+/* ===========================
+SKIP LINK
+=========================== */
+
+body > a[href="#main"] {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--cb-color-primary);
+    color: var(--cb-color-text-inverse);
+    padding: var(--cb-spacing-xs) var(--cb-spacing-sm);
+    z-index: 1000;
+    border-radius: 0 0 var(--cb-radius-md) 0;
+}
+
+body > a[href="#main"]:focus {
+    top: 0;
+}
+
+/* Visually hidden labels - VOOR ALLE FORM LABELS */
+form label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    main > section > article,
+    main > section > div > article {
+        border-width: 2px;
+    }
+
+    button {
+        border-width: 2px;
+    }
+}

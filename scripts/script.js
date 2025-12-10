@@ -671,10 +671,10 @@ if ('performance' in window) {
     function updateDots() {
         dots.forEach((dot, index) => {
             if (index === currentIndex) {
-                dot.classList.add('active');
+                dot.setAttribute('aria-selected', 'true');
                 dot.setAttribute('aria-selected', 'true');
             } else {
-                dot.classList.remove('active');
+                dot.setAttribute('aria-selected', 'false');
                 dot.setAttribute('aria-selected', 'false');
             }
         });
